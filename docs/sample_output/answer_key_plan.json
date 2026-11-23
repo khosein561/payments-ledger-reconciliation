@@ -1,0 +1,124 @@
+{
+  "seed": 42,
+  "counts": {
+    "missing_in_processor": 3,
+    "duplicate": 3,
+    "amount_mismatch": 4,
+    "timing_difference": 4,
+    "missing_in_ledger": 3,
+    "missing_at_bank": 2
+  },
+  "planted": [
+    {
+      "break_type": "missing_in_processor",
+      "ref": "ch_1e6a669c6d52d5",
+      "business_date": "2026-01-15"
+    },
+    {
+      "break_type": "missing_in_processor",
+      "ref": "ch_839fbc1223b513",
+      "business_date": "2026-01-06"
+    },
+    {
+      "break_type": "missing_in_processor",
+      "ref": "ch_b8667723d4526b",
+      "business_date": "2026-01-17"
+    },
+    {
+      "break_type": "duplicate",
+      "ref": "ch_85c750c693da11",
+      "business_date": "2026-01-09"
+    },
+    {
+      "break_type": "duplicate",
+      "ref": "ch_9c96e94d71c366",
+      "business_date": "2026-01-06"
+    },
+    {
+      "break_type": "duplicate",
+      "ref": "ch_dc9c9665a674c2",
+      "business_date": "2026-01-12"
+    },
+    {
+      "break_type": "amount_mismatch",
+      "ref": "ch_4bb00fb27c4026",
+      "business_date": "2026-01-07",
+      "delta_minor": 25
+    },
+    {
+      "break_type": "amount_mismatch",
+      "ref": "ch_bee3eb1d181ee9",
+      "business_date": "2026-01-11",
+      "delta_minor": 25
+    },
+    {
+      "break_type": "amount_mismatch",
+      "ref": "ch_5edb0db0b63bcf",
+      "business_date": "2026-01-11",
+      "delta_minor": 25
+    },
+    {
+      "break_type": "amount_mismatch",
+      "ref": "ch_c1235c76c5a0dc",
+      "business_date": "2026-01-12",
+      "delta_minor": -25
+    },
+    {
+      "break_type": "timing_difference",
+      "ref": "ch_737d1fd11376e0",
+      "business_date": "2026-01-13",
+      "shift_days": 1
+    },
+    {
+      "break_type": "timing_difference",
+      "ref": "ch_d42629e43e4288",
+      "business_date": "2026-01-08",
+      "shift_days": 1
+    },
+    {
+      "break_type": "timing_difference",
+      "ref": "ch_0bd4a90640be0f",
+      "business_date": "2026-01-07",
+      "shift_days": 2
+    },
+    {
+      "break_type": "timing_difference",
+      "ref": "ch_cf0671720b274b",
+      "business_date": "2026-01-16",
+      "shift_days": 2
+    },
+    {
+      "break_type": "missing_in_ledger",
+      "ref": "ch_ghost_0000",
+      "business_date": "2026-01-18",
+      "gross_minor": 4738,
+      "fee_minor": 167
+    },
+    {
+      "break_type": "missing_in_ledger",
+      "ref": "ch_ghost_0001",
+      "business_date": "2026-01-11",
+      "gross_minor": 3141,
+      "fee_minor": 121
+    },
+    {
+      "break_type": "missing_in_ledger",
+      "ref": "ch_ghost_0002",
+      "business_date": "2026-01-06",
+      "gross_minor": 17113,
+      "fee_minor": 526
+    },
+    {
+      "break_type": "missing_at_bank",
+      "ref": "po_8d4a75551ac8ea",
+      "business_date": "2026-01-09"
+    },
+    {
+      "break_type": "missing_at_bank",
+      "ref": "po_ab3b4d560c95ee",
+      "business_date": "2026-01-07"
+    }
+  ],
+  "start": "2026-01-05",
+  "end": "2026-01-18"
+}

@@ -1,0 +1,20 @@
+break_type,ref,amount_minor,amount_usd,business_date,age_days,age_bucket,severity,suggested_action,notes
+duplicate,ch_9c96e94d71c366,46607,466.07,2026-01-06,13,8d+,medium,"Confirm the duplicate is a file artefact, not a double charge; ask the processor to re-issue the file.",appears 2 times in the processor file
+missing_in_processor,ch_839fbc1223b513,22154,221.54,2026-01-06,13,8d+,high,"Confirm the transaction exists in the processor dashboard; if not, reverse the ledger entry.",in the ledger but not in the processor file
+missing_in_ledger,ch_ghost_0002,17113,171.13,2026-01-06,13,8d+,high,Check webhook delivery logs for the transaction; replay the event if it was missed.,in the processor file but not in the ledger (missed webhook?)
+missing_at_bank,po_ab3b4d560c95ee,1510764,15107.64,2026-01-07,12,8d+,high,Ask the bank / treasury whether the payout is delayed; escalate if older than 3 days.,payout recorded but no matching bank deposit
+amount_mismatch,ch_4bb00fb27c4026,26871,268.71,2026-01-07,12,8d+,high,Compare ledger and processor amounts; check for partial refunds or fee changes.,ledger charge gross=26871 fee=809; processor charge gross=26896 fee=809
+timing_difference,ch_0bd4a90640be0f,10156,101.56,2026-01-07,12,8d+,low,Usually benign; watch for a pattern and confirm it settles within the expected window.,settled 2 day(s) after the ledger date
+timing_difference,ch_d42629e43e4288,42153,421.53,2026-01-08,11,8d+,low,Usually benign; watch for a pattern and confirm it settles within the expected window.,settled 1 day(s) after the ledger date
+missing_at_bank,po_8d4a75551ac8ea,1488078,14880.78,2026-01-09,10,8d+,high,Ask the bank / treasury whether the payout is delayed; escalate if older than 3 days.,payout recorded but no matching bank deposit
+duplicate,ch_85c750c693da11,15290,152.9,2026-01-09,10,8d+,medium,"Confirm the duplicate is a file artefact, not a double charge; ask the processor to re-issue the file.",appears 2 times in the processor file
+amount_mismatch,ch_bee3eb1d181ee9,34977,349.77,2026-01-11,8,8d+,high,Compare ledger and processor amounts; check for partial refunds or fee changes.,ledger charge gross=34977 fee=1044; processor charge gross=35002 fee=1044
+missing_in_ledger,ch_ghost_0001,3141,31.41,2026-01-11,8,8d+,high,Check webhook delivery logs for the transaction; replay the event if it was missed.,in the processor file but not in the ledger (missed webhook?)
+amount_mismatch,ch_5edb0db0b63bcf,2644,26.44,2026-01-11,8,8d+,high,Compare ledger and processor amounts; check for partial refunds or fee changes.,ledger charge gross=2644 fee=107; processor charge gross=2669 fee=107
+amount_mismatch,ch_c1235c76c5a0dc,32882,328.82,2026-01-12,7,4-7d,high,Compare ledger and processor amounts; check for partial refunds or fee changes.,ledger charge gross=32882 fee=984; processor charge gross=32857 fee=984
+duplicate,ch_dc9c9665a674c2,5223,52.23,2026-01-12,7,4-7d,medium,"Confirm the duplicate is a file artefact, not a double charge; ask the processor to re-issue the file.",appears 2 times in the processor file
+timing_difference,ch_737d1fd11376e0,15051,150.51,2026-01-13,6,4-7d,low,Usually benign; watch for a pattern and confirm it settles within the expected window.,settled 1 day(s) after the ledger date
+missing_in_processor,ch_1e6a669c6d52d5,45090,450.9,2026-01-15,4,4-7d,high,"Confirm the transaction exists in the processor dashboard; if not, reverse the ledger entry.",in the ledger but not in the processor file
+timing_difference,ch_cf0671720b274b,33947,339.47,2026-01-16,3,2-3d,low,Usually benign; watch for a pattern and confirm it settles within the expected window.,settled 2 day(s) after the ledger date
+missing_in_processor,ch_b8667723d4526b,11592,115.92,2026-01-17,2,2-3d,high,"Confirm the transaction exists in the processor dashboard; if not, reverse the ledger entry.",in the ledger but not in the processor file
+missing_in_ledger,ch_ghost_0000,4738,47.38,2026-01-18,1,0-1d,high,Check webhook delivery logs for the transaction; replay the event if it was missed.,in the processor file but not in the ledger (missed webhook?)

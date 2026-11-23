@@ -1,0 +1,14 @@
+name: payments_ledger
+version: "0.1.0"
+config-version: 2
+profile: payments_ledger
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  payments_ledger:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

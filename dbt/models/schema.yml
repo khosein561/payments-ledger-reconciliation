@@ -1,0 +1,44 @@
+version: 2
+
+# Raw tables written by the Python application. dbt reads them; it never writes them.
+sources:
+  - name: ledger
+    schema: public
+    tables:
+      - name: accounts
+      - name: journal_entries
+      - name: postings
+      - name: recon_runs
+      - name: recon_breaks
+      - name: webhook_events
+        # Freshness: warn if no webhook has arrived for 1 hour, error after 6.
+        loaded_at_field: received_at
+        freshness:
+          warn_after: {count: 1, period: hour}
+          error_after: {count: 6, period: hour}
+
+models:
+  - name: stg_postings
+    description: Every posting with debits positive and credits negative.
+    columns:
+      - name: posting_id
+        data_tests: [not_null, unique]
+      - name: entry_id
+        data_tests: [not_null]
+      - name: direction
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['debit', 'credit']
+
+  - name: recon_summary
+    description: One row per reconciled business date.
+    columns:
+      - name: business_date
+        data_tests: [not_null, unique]
+      - name: match_rate_pct
+        description: Share of ledger transactions that matched, as a percentage.
+
+# Custom data tests live in dbt/tests/ (they return the rows that VIOLATE a rule):
+#   assert_ledger_sums_to_zero.sql       whole-ledger debits equal credits
+#   assert_every_entry_is_balanced.sql   each journal entry balances on its own
